@@ -1,0 +1,15 @@
+Simulation Results – Pixel Observations
+
+Input RGB: R=100, G=150, B=200
+Grayscale Output: Correct weighted conversion
+Brightness Output: Increased by offset with saturation handling
+Threshold Output: Binary output (0 or 255) as expected
+Downsample Output: Pixel retained at defined clock interval
+Contrast Stretch Output: Mid-range values expanded to full range
+Smoothing Output: Reduced abrupt intensity variations
+
+Input RGB: R=250, G=120, B=60
+Observed similar correct behavior across all modules.
+
+All outputs remained within valid 0–255 range.
+No overflow or underflow observed.
