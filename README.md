@@ -1,2 +1,2 @@
 # fpga-image-enhancement
-Real-time image enhancement using FPGA (Zynq-7000 SoC)
+FPGA-based basic image processing pipeline using Verilog HDL
