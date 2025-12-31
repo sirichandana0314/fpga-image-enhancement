@@ -1,53 +1,49 @@
-# FPGA-Based Basic Image Processing Using Verilog
+# FPGA-Based Image Processing Pipeline (Verilog HDL)
 
-## Project Description
-This project implements fundamental image preprocessing operations
-using Verilog HDL. The objective is to demonstrate how common
-image processing techniques can be mapped to hardware logic
-for real-time execution.
+## Overview
+This project implements a modular image processing pipeline using Verilog HDL.
+The design demonstrates fundamental pixel-level operations that are essential
+in real-time vision systems and can be extended for more advanced FPGA-based
+image processing applications.
 
-## Implemented Modules
-- Grayscale Conversion
-- Brightness Adjustment with Saturation
+## Features
+The pipeline includes the following modules:
+- Grayscale conversion
+- Brightness adjustment with saturation handling
 - Thresholding
 - Downsampling
-- Contrast Stretching
-- Smoothing Filter
+- Contrast stretching
+- Smoothing filter
 
 ## Architecture
-The system is designed as a modular pipeline where each image
-processing operation is implemented as an independent RTL module.
-A 3-bit select line allows dynamic selection of intermediate outputs
-for testing and debugging.
+Each operation is implemented as a separate RTL module. A top-level
+pipelined design connects these modules and allows dynamic testing of
+intermediate results using a control signal.
 
 ![Block Diagram](docs/block_diagram.png)
 
-## Tools Used
-- Verilog HDL
-- ModelSim / Vivado (Simulation)
+## Tools & Verification
+- **Language:** Verilog HDL  
+- **Simulation:** ModelSim / Vivado  
+- Verified using testbenches and waveform analysis to ensure correct logic
+  behavior and saturation limits.
 
-## Results and Verification
-The design was verified using Verilog testbenches.
-Simulation waveforms confirm correct operation of all
-image processing modules and proper saturation handling.
+## Results
+Simulation waveform and pixel-level validation confirm that each module
+behaves as expected, with correct data propagation and value ranges.
 
 ![Simulation Results](results/simulation_waveform.png)
 
-Pixel-level observations show expected transformations
-across grayscale, brightness, thresholding, downsampling,
-contrast stretching, and smoothing stages.
-
 ## Applications
-- FPGA-based image enhancement
-- Medical imaging preprocessing
-- Surveillance and vision systems
+- FPGA-based preprocessing for image enhancement
+- Embedded vision systems (medical, surveillance, robotics)
+- Real-time hardware image pipelines
 
 ## Limitations
-- Single-pixel processing
-- No frame buffers or convolution kernels
+- Single-pixel processing without frame buffering
+- No spatial convolution kernels or pattern detection
 
-## Future Scope
-- Line buffers for full image processing
-- Edge detection and advanced filters
-- FPGA implementation on Zynq SoC
-
+## Future Improvements
+- Frame buffering using line buffers or block RAM
+- Edge detection, convolution filters
+- Porting to Xilinx Zynq SoC with real sensor interfaces
