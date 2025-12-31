@@ -26,11 +26,16 @@ for testing and debugging.
 - Verilog HDL
 - ModelSim / Vivado (Simulation)
 
-## Results
-Simulation waveforms confirm correct pixel transformations across
-all processing stages, including proper saturation handling.
+## Results and Verification
+The design was verified using Verilog testbenches.
+Simulation waveforms confirm correct operation of all
+image processing modules and proper saturation handling.
 
-![Waveform](docs/waveform.png)
+![Simulation Results](results/simulation_waveform.png)
+
+Pixel-level observations show expected transformations
+across grayscale, brightness, thresholding, downsampling,
+contrast stretching, and smoothing stages.
 
 ## Applications
 - FPGA-based image enhancement
