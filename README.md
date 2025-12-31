@@ -32,7 +32,7 @@ intermediate results using a control signal.
 Simulation waveform and pixel-level validation confirm that each module
 behaves as expected, with correct data propagation and value ranges.
 
-![Simulation Results](results/simulation_waveform.png)
+![Simulation Results](results/waveform.png)
 
 ## Applications
 - FPGA-based preprocessing for image enhancement
